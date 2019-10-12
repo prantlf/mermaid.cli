@@ -31,7 +31,7 @@ const readStreamToString = async (inputStream, encoding) => {
 }
 
 const createMemoryStream = input => {
-  var stringStream = new stream.Readable()
+  const stringStream = new stream.Readable()
   stringStream.push(input)
   stringStream.push(null)
   return stringStream
@@ -82,7 +82,7 @@ if (input) {
 // check format
 if (format) {
   if (!/^svg|png|pdf$/.test(format)) {
-    error('Output format must be ".svg", ".png" or ".pdf"')
+    error('Output format must be "svg", "png" or "pdf"')
   }
 }
 
